@@ -1,0 +1,435 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "Dataset",
+  "@id": "https://doi.org/10.5281/zenodo.23494643",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.23494643",
+      "url": "https://doi.org/10.5281/zenodo.23494643",
+      "description": "Version DOI"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.23494642",
+      "url": "https://doi.org/10.5281/zenodo.23494642",
+      "description": "Concept DOI (all versions)"
+    }
+  ],
+  "name": "Apartment rental offers in Germany",
+  "alternateName": "immo_data",
+  "description": "268,850 apartment rental listings scraped from ImmoScout24, Germany's largest real estate platform, at four points in time between September 2018 and February 2020. Each row is one listing with rent and cost figures, size, location (federal state to postcode), building characteristics, energy data, features and free-text descriptions (German). Contains rental offers only, no sales listings. A full data dictionary is provided as data_dictionary.csv.",
+  "keywords": [
+    "rental market",
+    "apartment rentals",
+    "housing",
+    "rent prices",
+    "real estate",
+    "Germany",
+    "ImmoScout24",
+    "web scraping"
+  ],
+  "about": [
+    {
+      "@type": "DefinedTerm",
+      "name": "housing",
+      "termCode": "1690",
+      "@id": "http://eurovoc.europa.eu/1690",
+      "inDefinedTermSet": "http://eurovoc.europa.eu/100141"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "rent",
+      "termCode": "1687",
+      "@id": "http://eurovoc.europa.eu/1687",
+      "inDefinedTermSet": "http://eurovoc.europa.eu/100141"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "housing",
+      "@id": "http://www.eionet.europa.eu/gemet/concept/4022",
+      "inDefinedTermSet": "http://www.eionet.europa.eu/gemet/"
+    }
+  ],
+  "inLanguage": [
+    "en",
+    "de"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "CorrieBar",
+      "url": "https://www.kaggle.com/corrieaar"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Role",
+      "roleName": "DataCurator",
+      "contributor": {
+        "@type": "Person",
+        "name": "Pratham Mandya Badavaraju",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "SRH University, Campus Munich"
+        }
+      }
+    },
+    {
+      "@type": "Role",
+      "roleName": "DataCurator",
+      "contributor": {
+        "@type": "Person",
+        "name": "Phaneendra Reddy",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "SRH University, Campus Munich"
+        }
+      }
+    },
+    {
+      "@type": "Role",
+      "roleName": "DataCurator",
+      "contributor": {
+        "@type": "Person",
+        "name": "Gagan",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "SRH University, Campus Munich"
+        }
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zenodo",
+    "url": "https://zenodo.org"
+  },
+  "datePublished": "2026-10-20",
+  "temporalCoverage": "2018-09-22/2020-02",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Germany",
+    "sameAs": [
+      "https://sws.geonames.org/2921044/",
+      "https://www.wikidata.org/entity/Q183"
+    ]
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "dcterms:accessRights": {
+    "@id": "http://purl.org/coar/access_right/c_abf2"
+  },
+  "conditionsOfAccess": "Open access, no registration required.",
+  "isBasedOn": "https://www.kaggle.com/datasets/corrieaar/apartment-rental-offers-in-germany",
+  "prov:wasDerivedFrom": {
+    "@id": "https://www.kaggle.com/datasets/corrieaar/apartment-rental-offers-in-germany"
+  },
+  "prov:hadPrimarySource": {
+    "@id": "https://www.immobilienscout24.de"
+  },
+  "measurementTechnique": "Web scraping of all rental listings available on ImmoScout24 at four points in time (2018-09-22, 2019-05-10, 2019-10-08 and February 2020). Minimal processing by the original author.",
+  "url": "https://zenodo.org/records/23494643",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "immo_data.csv",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://zenodo.org/api/records/23494643/files/immo_data.csv/content",
+      "contentSize": "284924672 bytes (271.73 MiB)",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "SHA-256",
+        "value": "895b934bd08bbaa75399633b4b48b042324d57cd068a5f383e0271725a1994e9"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "name": "data_dictionary.csv",
+      "encodingFormat": "text/csv",
+      "description": "Variable-level documentation for all columns."
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "regio1",
+      "description": "Federal state (Bundesland), words joined by underscores, e.g. Nordrhein_Westfalen.",
+      "propertyID": "https://schema.org/addressRegion"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "serviceCharge",
+      "description": "Monthly ancillary costs (Nebenkosten) as stated by the landlord.",
+      "unitText": "EUR per month"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "heatingType",
+      "description": "Type of heating system, e.g. central_heating, district_heating."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "telekomTvOffer",
+      "description": "Availability and terms of Deutsche Telekom TV at the address."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "telekomHybridUploadSpeed",
+      "description": "Upload speed of the Telekom hybrid (DSL + LTE) offer.",
+      "unitText": "Mbit/s"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "newlyConst",
+      "description": "True if the building is newly constructed."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "balcony",
+      "description": "True if the flat has a balcony."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "picturecount",
+      "description": "Number of photos attached to the listing.",
+      "unitText": "count"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pricetrend",
+      "description": "Price trend indicator calculated by ImmoScout24.",
+      "unitText": "undocumented (possibly % change)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "telekomUploadSpeed",
+      "description": "Maximum Deutsche Telekom upload speed at the address.",
+      "unitText": "Mbit/s"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "totalRent",
+      "description": "Total monthly rent (Warmmiete): base rent plus service charge and heating costs, where given.",
+      "unitText": "EUR per month"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "yearConstructed",
+      "description": "Year the building was constructed.",
+      "propertyID": "https://schema.org/yearBuilt",
+      "unitText": "year"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "scoutId",
+      "description": "Unique listing ID on ImmoScout24.",
+      "propertyID": "https://schema.org/identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "noParkSpaces",
+      "description": "Number of parking spaces offered with the flat.",
+      "unitText": "count"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "firingTypes",
+      "description": "Energy source(s) used for heating, e.g. gas, oil; can combine several values."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hasKitchen",
+      "description": "True if a fitted kitchen is included."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "geo_bln",
+      "description": "Federal state (Bundesland); same information as regio1."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cellar",
+      "description": "True if a cellar room is included."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "yearConstructedRange",
+      "description": "Binned construction year (code 1-9) derived from yearConstructed."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "baseRent",
+      "description": "Monthly base rent without utilities (Kaltmiete).",
+      "unitText": "EUR per month"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "houseNumber",
+      "description": "House number; empty when the landlord hides the address."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "livingSpace",
+      "description": "Living area of the flat.",
+      "propertyID": "https://schema.org/floorSize",
+      "unitText": "square metre (m2)",
+      "unitCode": "MTK"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "geo_krs",
+      "description": "District (Kreis); same information as regio2."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "condition",
+      "description": "Condition of the flat, e.g. well_kept, refurbished, first_time_use."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "interiorQual",
+      "description": "Quality of the interior, e.g. simple, normal, sophisticated, luxury."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "petsAllowed",
+      "description": "Whether pets are allowed (e.g. yes, no, negotiable).",
+      "propertyID": "https://schema.org/petsAllowed"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "street",
+      "description": "Street name; may contain HTML-encoded characters."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "streetPlain",
+      "description": "Street name in plain text; empty when the landlord hides the address.",
+      "propertyID": "https://schema.org/streetAddress"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "lift",
+      "description": "True if the building has a lift."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "baseRentRange",
+      "description": "Binned base rent (code 1-9) derived from baseRent."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "typeOfFlat",
+      "description": "Type of flat, e.g. apartment, roof_storey, ground_floor, maisonette."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "geo_plz",
+      "description": "German postal code (Postleitzahl).",
+      "propertyID": "https://schema.org/postalCode"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "noRooms",
+      "description": "Number of rooms (half rooms possible, e.g. 2.5).",
+      "propertyID": "https://schema.org/numberOfRooms",
+      "unitText": "rooms"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "thermalChar",
+      "description": "Energy consumption or demand value from the energy performance certificate.",
+      "unitText": "kWh per m2 per year"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "floor",
+      "description": "Floor of the flat (0 = ground floor, negative = basement).",
+      "propertyID": "https://schema.org/floorLevel",
+      "unitText": "floor number"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "numberOfFloors",
+      "description": "Total number of floors in the building.",
+      "unitText": "floors"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "noRoomsRange",
+      "description": "Binned number of rooms (code 1-5) derived from noRooms."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "garden",
+      "description": "True if a garden can be used."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "livingSpaceRange",
+      "description": "Binned living space (code 1-7) derived from livingSpace."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "regio2",
+      "description": "District or district-free city (Kreis / kreisfreie Stadt)."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "regio3",
+      "description": "Town or city quarter (Ortsteil / Stadtteil).",
+      "propertyID": "https://schema.org/addressLocality"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "description",
+      "description": "Free-text description of the offer written by the landlord (mostly German)."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "facilities",
+      "description": "Free-text description of facilities and fittings (mostly German)."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "heatingCosts",
+      "description": "Monthly heating costs, if stated separately.",
+      "unitText": "EUR per month"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "energyEfficiencyClass",
+      "description": "Energy efficiency class from the energy performance certificate (A_PLUS to H)."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "lastRefurbish",
+      "description": "Year of the most recent refurbishment.",
+      "unitText": "year"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "electricityBasePrice",
+      "description": "Electricity base price shown on the listing page.",
+      "unitText": "EUR (billing period undocumented, likely per year)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "electricityKwhPrice",
+      "description": "Electricity price per kWh shown on the listing page.",
+      "unitText": "EUR per kWh"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "date",
+      "description": "Scrape period in which the listing was collected (Sep18, May19, Oct19, Feb20)."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Forces the white business theme, even when Windows or the browser is in dark mode
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#f4f6f9"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#1d2433"
+font = "sans serif"

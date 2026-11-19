@@ -1,0 +1,63 @@
+variable,group,description,unit,intended_type,pandas_dtype,missing_pct,hidden_missing,n_unique,min,max,values_or_examples,quality_notes
+regio1,location,"Federal state (Bundesland), words joined by underscores, e.g. Nordrhein_Westfalen.",,category,str,0.0,0,16,,,Nordrhein_Westfalen | Sachsen | Bayern | Sachsen_Anhalt | Hessen | Niedersachsen | Baden_Württemberg | Berlin | Thüringen | Rheinland_Pfalz | Brandenburg | Schleswig_Holstein | Mecklenburg_Vorpommern | Hamburg | Bremen | Saarland,Duplicates geo_bln.
+serviceCharge,price,Monthly ancillary costs (Nebenkosten) as stated by the landlord.,EUR per month,float,float64,2.6,0,12266,0.0,146118.0,,Whether heating is included is not documented by the source.
+heatingType,building,"Type of heating system, e.g. central_heating, district_heating.",,category,str,16.7,0,13,,,central_heating | district_heating | gas_heating | self_contained_central_heating | floor_heating | oil_heating | heat_pump | combined_heat_and_power_plant | night_storage_heater | wood_pellet_heating | electric_heating | stove_heating | solar_heating,
+telekomTvOffer,internet,Availability and terms of Deutsche Telekom TV at the address.,,category,str,12.1,4957,3,,,ONE_YEAR_FREE | NONE | ON_DEMAND,
+telekomHybridUploadSpeed,internet,Upload speed of the Telekom hybrid (DSL + LTE) offer.,Mbit/s,float,float64,83.3,0,1,10.0,10.0,10.0,Constant value (10) wherever present; carries no information.
+newlyConst,building,True if the building is newly constructed.,,boolean,bool,0.0,0,2,,,False | True,
+balcony,features,True if the flat has a balcony.,,boolean,bool,0.0,0,2,,,True | False,
+picturecount,listing,Number of photos attached to the listing.,count,integer,int64,0.0,0,95,0,121,,
+pricetrend,price,Price trend indicator calculated by ImmoScout24.,undocumented (possibly % change),float,float64,0.7,0,1234,-12.33,14.92,,Meaning and unit are not documented by the source.
+telekomUploadSpeed,internet,Maximum Deutsche Telekom upload speed at the address.,Mbit/s,float,float64,12.4,0,7,1.0,100.0,40.0 | 2.4 | 10.0 | 5.0 | 1.0 | 100.0 | 4.0,
+totalRent,price,"Total monthly rent (Warmmiete): base rent plus service charge and heating costs, where given.",EUR per month,float,float64,15.1,0,28486,0.0,15751535.0,,Contains 0 and extreme outliers.
+yearConstructed,building,Year the building was constructed.,year,integer,float64,21.2,0,465,1000.0,2090.0,,"Contains implausible values (e.g. 1000, 2090)."
+scoutId,identifier,Unique listing ID on ImmoScout24.,,string,int64,0.0,0,268850,28871743,115711743,,
+noParkSpaces,features,Number of parking spaces offered with the flat.,count,integer,float64,65.4,0,71,0.0,2241.0,,"Contains implausible values (max 2,241)."
+firingTypes,building,"Energy source(s) used for heating, e.g. gas, oil; can combine several values.",,category (multi-valued),str,21.2,0,132,,,gas | district_heating | oil | natural_gas_light | electricity | ...,
+hasKitchen,features,True if a fitted kitchen is included.,,boolean,bool,0.0,0,2,,,False | True,
+geo_bln,location,Federal state (Bundesland); same information as regio1.,,category,str,0.0,0,16,,,Nordrhein_Westfalen | Sachsen | Bayern | Sachsen_Anhalt | Hessen | Niedersachsen | Baden_Württemberg | Berlin | Thüringen | Rheinland_Pfalz | Brandenburg | Schleswig_Holstein | Mecklenburg_Vorpommern | Hamburg | Bremen | Saarland,Redundant with regio1.
+cellar,features,True if a cellar room is included.,,boolean,bool,0.0,0,2,,,True | False,
+yearConstructedRange,building,Binned construction year (code 1-9) derived from yearConstructed.,,ordinal category,float64,21.2,0,9,1.0,9.0,1.0 | 2.0 | 9.0 | 5.0 | 3.0 | 4.0 | 8.0 | 6.0 | 7.0,Bin boundaries not documented by the source; see inferred ranges. Inferred ranges of yearConstructed: 1: ~1717.02-1950; 2: ~1951-1970; 3: ~1971-1980; 4: ~1981-1990; 5: ~1991-2000; 6: ~2001-2005; 7: ~2006-2010; 8: ~2011-2015; 9: ~2016-2020
+baseRent,price,Monthly base rent without utilities (Kaltmiete).,EUR per month,float,float64,0.0,0,26659,0.0,9999999.0,,"Contains 0 and placeholder values such as 9,999,999."
+houseNumber,location,House number; empty when the landlord hides the address.,,string,str,26.4,0,5510,,,1 | 2 | 4 | 3 | 5 | ...,
+livingSpace,size,Living area of the flat.,square metre (m2),float,float64,0.0,0,13005,0.0,111111.0,,"Contains 0 and placeholder values such as 111,111."
+geo_krs,location,District (Kreis); same information as regio2.,,category,str,0.0,0,419,,,Leipzig | Chemnitz | Berlin | Dresden | Magdeburg | ...,Redundant with regio2.
+condition,building,"Condition of the flat, e.g. well_kept, refurbished, first_time_use.",,category,str,25.5,0,10,,,well_kept | refurbished | fully_renovated | first_time_use | mint_condition | modernized | first_time_use_after_refurbishment | negotiable | need_of_renovation | ripe_for_demolition,
+interiorQual,building,"Quality of the interior, e.g. simple, normal, sophisticated, luxury.",,ordinal category,str,41.9,0,4,,,normal | sophisticated | luxury | simple,
+petsAllowed,features,"Whether pets are allowed (e.g. yes, no, negotiable).",,category,str,42.6,0,3,,,negotiable | no | yes,
+street,location,Street name; may contain HTML-encoded characters.,,string,str,0.0,71013,52373,,,no_information | Hauptstra&szlig;e | Bahnhofstra&szlig;e | Leipziger Stra&szlig;e | Goethestra&szlig;e | ...,'no_information' is used as a placeholder when the address is hidden (disguised missing value).
+streetPlain,location,Street name in plain text; empty when the landlord hides the address.,,string,str,26.4,0,54490,,,Hauptstraße | Bahnhofstraße | Leipziger_Straße | Goethestraße | Bahnhofstr. | ...,
+lift,features,True if the building has a lift.,,boolean,bool,0.0,0,2,,,False | True,
+baseRentRange,price,Binned base rent (code 1-9) derived from baseRent.,,ordinal category,int64,0.0,0,9,1,9,2 | 1 | 5 | 3 | 7 | 4 | 6 | 8 | 9,Bin boundaries not documented by the source; see inferred ranges. Inferred ranges of baseRent: 1: ~130-300; 2: ~303-400; 3: ~403.2-500; 4: ~504-600; 5: ~606-800; 6: ~806-1000; 7: ~1012.07-1500; 8: ~1511.07-2000; 9: ~2030-7200
+typeOfFlat,building,"Type of flat, e.g. apartment, roof_storey, ground_floor, maisonette.",,category,str,13.6,0,10,,,apartment | roof_storey | ground_floor | other | maisonette | raised_ground_floor | penthouse | terraced_flat | half_basement | loft,
+geo_plz,location,German postal code (Postleitzahl).,,string (5 characters),int64,0.0,0,7634,852,99998,,"Read as integer, so leading zeros are lost (e.g. 01067 -> 1067)."
+noRooms,size,"Number of rooms (half rooms possible, e.g. 2.5).",rooms,float,float64,0.0,0,64,1.0,999.99,,Contains placeholder values such as 999.99.
+thermalChar,building,Energy consumption or demand value from the energy performance certificate.,kWh per m2 per year,float,float64,39.6,0,7847,0.1,1996.0,,Some values look like years typed into this field (e.g. 1996).
+floor,size,"Floor of the flat (0 = ground floor, negative = basement).",floor number,integer,float64,19.1,0,53,-1.0,999.0,,Contains placeholder values such as 999.
+numberOfFloors,size,Total number of floors in the building.,floors,integer,float64,36.4,0,57,0.0,999.0,,Contains placeholder values such as 999.
+noRoomsRange,size,Binned number of rooms (code 1-5) derived from noRooms.,,ordinal category,int64,0.0,0,5,1,5,3 | 2 | 1 | 4 | 5,Bin boundaries not documented by the source; see inferred ranges. Inferred ranges of noRooms: 1: ~1-1.5; 2: ~2-2.5; 3: ~3-3.5; 4: ~4-4.5; 5: ~5-10
+garden,features,True if a garden can be used.,,boolean,bool,0.0,0,2,,,False | True,
+livingSpaceRange,size,Binned living space (code 1-7) derived from livingSpace.,,ordinal category,int64,0.0,0,7,1,7,3 | 2 | 4 | 1 | 5 | 6 | 7,Bin boundaries not documented by the source; see inferred ranges. Inferred ranges of livingSpace: 1: ~12-40.6344; 2: ~41.07-60.77; 3: ~61-80.2943; 4: ~81-100.18; 5: ~101-120; 6: ~121-150; 7: ~151-372.333
+regio2,location,District or district-free city (Kreis / kreisfreie Stadt).,,category,str,0.0,0,419,,,Leipzig | Chemnitz | Berlin | Dresden | Magdeburg | ...,Duplicates geo_krs.
+regio3,location,Town or city quarter (Ortsteil / Stadtteil).,,category,str,0.0,0,8684,,,Innenstadt | Stadtmitte | Altstadt | Sonnenberg | Kaßberg | ...,
+description,listing,Free-text description of the offer written by the landlord (mostly German).,,text,str,7.3,0,212621,,,"+ MEIN GUENTZ - Quartier der Generationen
++ bis 2020 fertiggestellter Neubau in Johannstadt-Nord
++ Wohnen und Nahversorger in einem Areal
+  (REWE-Supermarkt, Drogerie ROSSMANN, Bäckerei Schwerdtner, TUI-Reisecenter)
++ Kleinst- bis Familienwohnungen mit optimalen Grundrissen
++ Innenbereich mit begrünten Erholungsflächen und einem Spielplatz sowie Ruhezonen zum Verweilen | saniertes Mehrfamilienhaus | Das Objekt ist ein hochwertig saniertes und denkmalgeschütztes Mehrfamilienhaus.
+ | -saniertes Mehrfamilienhaus
+-unterkellert | Die „Heeresbäckerei“ befindet sich auf einem ehemaligen Kasernengelände, welches sich bis 2007 in militärischer Nutzung befand. 
+
+Die denkmalgeschützten Altbauten wurden zwischen 1875 bis 1877 als Militärstadt von Otto und Joachim Streib sowie Bernhard Leuthier erbaut.
+
+Das Areal verbindet nach aufwendiger Sanierung mit seinen 7 Neubaugebäuden und 7 sanierten Altbauten den Charme zwischen Industrie-Chic und modernem Wohnkomfort und wird nach seiner vollständigen Fertigstellung den Wohnbedürfnissen von Jung und Alt gerecht. Charakteristisch ist vor allem die imposante Außenfassade der Altbauten mit den roten Verblendsteinen, welche ebenfalls in dem Design der Neubauten aufgegriffen wurden und sich somit neu und historisch zu einem stimmigen Gesamtbild vereinen.  
+ 
+Zwei Tiefgaragen, Außenstellplätze, zahlreiche Grünflächen und Spielgelegenheiten ergänzen das exklusive Erscheinungsbild einer modernen Wohnanlage. | ...",
+facilities,listing,Free-text description of facilities and fittings (mostly German).,,text,str,19.7,0,189526,,,"Laminat | Diese Wohnung wird komplett renoviert und nach Bedarf mit neuen Fußbodenbelägen, Innentüren etc. ausgestattet. Das Bad ist gefliest und wird mit Badewanne bzw. Dusche ausgestattet. Diese Wohnung verfügt über eine moderne Ausstattung. Hierzu gehören die Gegensprechanlage, Kabel-, Internet- und Telefonanschluss ebenso, wie der Waschmaschinen- und Geschirrspüleranschluss.Individuelle Ausstattungswünsche werden gern nach Möglichkeit und in Absprache mit unseren Mitarbeitern berücksichtigt. Die Wohnung wird vor Übergabe komplett gereinigt und ist sofort bezugsfertig.Abstellmöglichkeiten bietet der mietereigene Keller. Darüber hinaus steht unseren Mietern ein Wäschetrockenplatz zur Verfügung.Kostenlose öffentliche Parkplätze sind in unmittelbarer Umgebung vorhanden. | Laminatboden | Einbauküche | Parkett | ...",
+heatingCosts,price,"Monthly heating costs, if stated separately.",EUR per month,float,float64,68.2,0,5669,0.0,12613.0,,
+energyEfficiencyClass,building,Energy efficiency class from the energy performance certificate (A_PLUS to H).,,ordinal category,str,71.1,14130,10,,,C | NO_INFORMATION | D | B | E | A | F | A_PLUS | G | H,
+lastRefurbish,building,Year of the most recent refurbishment.,year,integer,float64,70.0,0,88,1015.0,2919.0,,"Contains typos (e.g. 1015, 2919)."
+electricityBasePrice,price,Electricity base price shown on the listing page.,"EUR (billing period undocumented, likely per year)",float,float64,82.6,0,2,71.43,90.76,90.76 | 71.43,"Nearly constant; appears to be a default tariff, not listing-specific."
+electricityKwhPrice,price,Electricity price per kWh shown on the listing page.,EUR per kWh,float,float64,82.6,0,15,0.1705,0.2276,0.1985 | 0.2055 | 0.1915 | 0.1845 | 0.2276 | 0.2125 | 0.2074 | 0.1775 | 0.2205 | 0.2137 | 0.2132 | 0.2144 | 0.1705 | 0.2195 | 0.2265,Nearly constant; appears to be a default tariff.
+date,time,"Scrape period in which the listing was collected (Sep18, May19, Oct19, Feb20).",,date (ISO 8601 recommended),str,0.0,0,4,,,Feb20 | May19 | Oct19 | Sep18,"Non-standard format, e.g. 'Feb20'; should be converted to ISO 8601 (2020-02)."
